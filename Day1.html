@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            width: 100%;
+            margin: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #555;
+           border-color: #fda085;
+        }
+        input, select, textarea {
+            margin-top: 10px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 12px rgba(0,123,255,0.5);
+        }
+        button {
+            margin-top: 30px;
+            padding: 15px;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%);
+            transform: translateY(-5px);
+        }
+        .icon {
+            margin-right: 10px;
+            color: #ff758c;
+            transition: color 0.3s;
+        }
+        .icon:hover {
+            color: #ff7eb3;
+        }
+        .checkbox-container input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Application Form</h1>
+        <form action="#" method="POST">
+            <label for="name"><i class="fas fa-user icon"></i>Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email"><i class="fas fa-envelope icon"></i>Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone"><i class="fas fa-phone icon"></i>Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="linkedin"><i class="fab fa-linkedin icon"></i>LinkedIn Profile</label>
+            <input type="url" id="linkedin" name="linkedin">
+
+            <label for="portfolio"><i class="fas fa-briefcase icon"></i>Portfolio/Website</label>
+            <input type="url" id="portfolio" name="portfolio">
+
+            <label for="dob"><i class="fas fa-calendar icon"></i>Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender"><i class="fas fa-venus-mars icon"></i>Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="address"><i class="fas fa-map-marker-alt icon"></i>Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="position"><i class="fas fa-briefcase icon"></i>Position Applied For</label>
+            <input type="text" id="position" name="position" required>
+
+            <label for="experience"><i class="fas fa-chart-line icon"></i>Years of Experience</label>
+            <input type="number" id="experience" name="experience" min="0" required>
+
+            <label for="skills"><i class="fas fa-cogs icon"></i>Skills (comma separated)</label>
+            <input type="text" id="skills" name="skills" required>
+
+            <label for="availability"><i class="fas fa-clock icon"></i>Availability</label>
+            <div class="checkbox-container">
+                <input type="checkbox" name="availability" value="Full-Time"> Full-Time
+                <input type="checkbox" name="availability" value="Part-Time"> Part-Time
+            </div>
+
+            <label for="education"><i class="fas fa-graduation-cap icon"></i>Highest Level of Education</label>
+            <input type="text" id="education" name="education" required>
+
+            <label for="languages"><i class="fas fa-language icon"></i>Languages Known</label>
+            <input type="text" id="languages" name="languages" required>
+
+            <label for="resume"><i class="fas fa-file-upload icon"></i>Upload Resume</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <label for="coverletter"><i class="fas fa-comment icon"></i>Cover Letter</label>
+            <textarea id="coverletter" name="coverletter" rows="5" required></textarea>
+
+            <label for="startdate"><i class="fas fa-calendar-check icon"></i>Available Start Date</label>
+            <input type="date" id="startdate" name="startdate" required>
+
+            <label for="referral"><i class="fas fa-user-friends icon"></i>Referral Source</label>
+            <input type="text" id="referral" name="referral">
+
+            <label for="expectedSalary"><i class="fas fa-dollar-sign icon"></i>Expected Salary</label>
+            <input type="number" id="expectedSalary" name="expectedSalary" min="0">
+
+            <label for="locationPreference"><i class="fas fa-map-marker-alt icon"></i>Preferred Location</label>
+            <input type="text" id="locationPreference" name="locationPreference">
+
+            <button type="submit"><i class="fas fa-paper-plane icon"></i>Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
