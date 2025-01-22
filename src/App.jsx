@@ -1,15 +1,11 @@
-import React from "react";
-import OrgChart from "./OrgChart";
+import React from 'react'
 
-const App = () => {
+function App() {
   return (
     <div>
-      <h1 style={{ textAlign: "center", marginTop: "20px" }}>
-        Dynamic Org Chart Builder
-      </h1>
-      <OrgChart />
+      <nav/>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
