@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input-container {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.task-list li button {
+  background-color: #dc3545;
+}
+
+.task-list li button:hover {
+  background-color: #a71d2a;
+}
